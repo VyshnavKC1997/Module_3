@@ -1,0 +1,30 @@
+2023-12-13 14:48:58.652 +05:30 [INF] Getting single user details
+2023-12-13 14:48:59.349 +05:30 [INF] user data not be null
+2023-12-13 14:48:59.350 +05:30 [INF] User id fetched correct
+2023-12-13 14:48:59.353 +05:30 [INF] Create a user test started
+2023-12-13 14:49:00.225 +05:30 [INF] API Response:{
+  "userId": "3",
+  "completed": "true",
+  "id": 201
+}
+2023-12-13 14:49:00.226 +05:30 [INF] User created and returned
+2023-12-13 14:49:00.237 +05:30 [INF] Title is not empty
+2023-12-13 14:49:00.237 +05:30 [INF] Create User test passed All asserts
+2023-12-13 14:49:00.238 +05:30 [INF] Update user test started
+2023-12-13 14:49:01.800 +05:30 [INF] API Response:{
+  "userId": "3",
+  "completed": "true",
+  "id": 2
+}
+2023-12-13 14:49:01.801 +05:30 [INF] User returned
+2023-12-13 14:49:01.801 +05:30 [INF] User title is null as expected
+2023-12-13 14:49:01.801 +05:30 [INF] Updated User test passed all asserts
+2023-12-13 14:49:01.802 +05:30 [INF] Delete user test started
+2023-12-13 14:49:02.513 +05:30 [INF] User deleted
+2023-12-13 14:49:02.514 +05:30 [INF] Delete User test passed.
+2023-12-13 14:49:02.518 +05:30 [INF] Get non existing test started
+2023-12-13 14:49:03.760 +05:30 [INF] API Response: {}
+2023-12-13 14:49:03.761 +05:30 [INF] Get non existing test passed all asserts
+2023-12-13 14:49:03.761 +05:30 [INF] Get All User Test test started
+2023-12-13 14:49:04.200 +05:30 [INF] user data not be null
+2023-12-13 14:49:04.200 +05:30 [INF] User id fetched correct

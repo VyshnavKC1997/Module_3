@@ -1,0 +1,3 @@
+2023-12-13 14:48:35.639 +05:30 [INF] Getting single user details
+2023-12-13 14:48:37.105 +05:30 [INF] user data not be null
+2023-12-13 14:48:37.107 +05:30 [INF] User id fetched correct
