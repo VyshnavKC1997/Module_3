@@ -19,6 +19,6 @@ namespace Assignment_3.TestScript
         public string? Title { get; set; }
 
         [JsonProperty("completed")]
-        public string? Completed { get; set; }
+        public bool Completed { get; set; }
     }
 }

@@ -85,7 +85,7 @@ namespace Assignment_3.TestScript
                 Assert.That(response.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK));
                 Log.Information($"API Response:{response.Content}");
                 var user = JsonConvert.DeserializeObject<UserData>(response.Content);
-                Assert.NotNull(user);
+                Assert.That(user,Is.Not.Null);
                 Log.Information("User returned");
                 Assert.IsNull(user.Title);
                 Log.Information("User title is null as expected");
