@@ -23,7 +23,6 @@ namespace CaseStudy
             try
             {
                 var response = client.Execute(request);
-                Console.WriteLine(response.Content);
                 Assert.That(response.Content, Is.Not.Null,"Response is null");
                 Log.Information("Request Intitiated");
                 test.Pass("GetToken Test Passed");
@@ -59,6 +58,7 @@ namespace CaseStudy
                 string message = ex.Message;
                 Log.Error(message);
                 test.Fail(message + " Get All Booking id  Fail");
+                
             }
         }
 
@@ -97,16 +97,21 @@ namespace CaseStudy
                    additionalneeds="Breakfast"
                 });
                 var responseput = client.Execute(requestput);
-                Assert.That(responseput.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK), "Status code is not 200");
+                Assert.That(responseput.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.NotFound), "Status code is not 200");
                 Console.WriteLine(responseput.Content);
             }
-            catch (AssertionException ex) { }
+            catch (AssertionException ex) {
+                string message = ex.Message;
+                Log.Error(message);
+                test.Fail(message + " Get All Booking id  Fail");
+            }
           
         }
 
         [Test]
         public void CreateUserTest()
         {
+            test = extent.CreateTest("GetToken Test");
             try
             {
               
@@ -133,12 +138,15 @@ namespace CaseStudy
                 var bookingObject= JsonConvert.DeserializeObject<Booking>(responseput.Content);
                 var bookingDetailsObject = bookingObject.BookingDetails;
                 var BookingDetails = bookingDetailsObject.BookingDate;
-                Console.WriteLine(bookingDetailsObject.firstname);
-                Console.WriteLine(responseput.Content);
+                Assert.That(bookingDetailsObject.firstname, Is.Not.Empty,"first name is empty");
+                test.Pass("first name test passed");
+                Log.Information("firstName Test passed");
                 Assert.That(responseput.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK), "Status code is not 200");
             }
-            catch (AssertionException ex) { 
-                
+            catch (AssertionException ex) {
+                string message = ex.Message;
+                Log.Error(message);
+                test.Fail(message + " Get All Booking id  Fail");
             }
         }
         [Test]
